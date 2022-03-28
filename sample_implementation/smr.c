@@ -4,14 +4,6 @@
 #include<windows.h>
 #include<string.h>
 #include"menu.h"
-struct student
-{
-    char name[20];
-    char mobile[10];
-    int rollno; 
-    char course[20];
-    char branch[20];
-};
 int main(int argc,char **argv)
 {
     //gotoxy(15,8);
