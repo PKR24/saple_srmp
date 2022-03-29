@@ -1,7 +1,5 @@
 #include<stdio.h>
-#include"conio.h"
 #include<stdlib.h>
-#include<windows.h>
 #include<string.h>
 void gotoxy(int ,int );
 void menu();
