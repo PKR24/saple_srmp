@@ -1,7 +1,5 @@
 #include<stdio.h>
-#include"conio.h"
 #include<stdlib.h>
-#include"windows.h"
 #include<string.h>
 #include"menu.h"
 int main(int argc,char **argv)
