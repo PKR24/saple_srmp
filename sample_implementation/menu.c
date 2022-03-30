@@ -140,7 +140,7 @@ void search()
     printf("<--:SEARCH RECORD:-->");
     printf("Enter name of student : ");
     fflush(stdin);
-    fgets(stname);
+    fgets(stname,25,stdin);
     fp = fopen("record.txt","rb+");
     if(fp == NULL){
         printf("Error opening file");
