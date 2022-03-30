@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-void gotoxy(int ,int );
 void menu();
 void add();
 void view();
@@ -80,17 +79,17 @@ void add()
         printf("Enter details of student.");
         printf("Enter Name : ");
 //        gets(std.name);///???
-        fgets(std.name);
+        fgets(std.name,25,stdin);
         printf("Enter Mobile Number : ");
-        fgets(std.mobile);
+        fgets(std.mobile,10,stdin);
         printf("Enter Roll No : ");
         scanf("%d",&std.rollno);
         fflush(stdin);
         printf("Enter Course : ");
 //        gets(std.course);///???
-        fgets(std.course);
+        fgets(std.course,25,stdin);
         printf("Enter Branch : ");
-        fgets(std.branch);
+        fgets(std.branch,25,stdin);
 //        gotoxy(10,12);
 //        printf("Enter Father's Name : ");
 //        gets(std.fathername);
@@ -170,7 +169,7 @@ void modify()
     printf("<--:MODIFY RECORD:-->");
     printf("Enter name of student to modify: ");
     fflush(stdin);
-    fgets(stname);
+    fgets(stname,25,stdin);
     fp = fopen("record.txt","rb+");
     if(fp == NULL){
         printf("Error opening file");
@@ -182,17 +181,17 @@ void modify()
     {
         if(strcmp(stname,std.name) == 0){
             printf("Enter name: ");
-            fgets(std.name);
+            fgets(std.name,25,stdin);
             printf("Enter mobile number : ");
-            fgets(std.mobile);
+            fgets(std.mobile,10,stdin);
             printf("Enter roll no : ");
             scanf("%d",&std.rollno);
             printf("Enter Course : ");
             fflush(stdin);
-            fgets(std.course);
+            fgets(std.course,25,stdin);
             printf("Enter Branch : ");
             fflush(stdin);
-            fgets(std.branch);
+            fgets(std.branch,25,stdin);
             fseek(fp ,-sizeof(std),SEEK_CUR);
             fwrite(&std,sizeof(std),1,fp);
             break;
@@ -212,7 +211,7 @@ void deleterec()
     printf("<--:DELETE RECORD:-->");
     printf("Enter name of student to delete record : ");
     fflush(stdin);
-    fgets(stname);
+    fgets(stname,25,stdin);
     fp = fopen("record.txt","rb+");
     if(fp == NULL){
         printf("Error opening file");
